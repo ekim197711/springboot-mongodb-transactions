@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  mymongo:
+    image: mongo
+    ports:
+      - 27017:27017
+    volumes:
+    - /home/mike/IdeaProjects/influencer/springboot-mongodb-transaction/custom:/etc/mongo
+    command: "mongod --bind_ip_all --replSet myrepl --config /etc/mongo/mongod.conf"
